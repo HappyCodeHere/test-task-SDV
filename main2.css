@@ -10,7 +10,8 @@ h2 {
   font-style: normal; }
 
 p {
-  font-size: 14.5px; }
+  font-size: 13px;
+  line-height: 1.4; }
 
 ul {
   list-style: none; }
@@ -20,6 +21,9 @@ a {
 
 header {
   background-color: #2e3133;
+  background-image: linear-gradient(45deg, #36393a 25%, transparent 25%), linear-gradient(-45deg, #36393a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #36393a 75%), linear-gradient(-45deg, transparent 75%, #36393a 75%);
+  background-size: 2px 2px;
+  background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
   padding: 50px 15% 0 15%; }
   header ul {
     display: inline-block;
@@ -28,34 +32,41 @@ header {
     header ul li {
       display: inline-block; }
   header ul.main-menu {
-    width: 80%; }
+    width: 85%; }
     header ul.main-menu li {
-      min-height: 50px;
       padding-top: 10px; }
     header ul.main-menu li a {
       display: block;
       box-sizing: border-box;
-      color: #919292;
+      color: #B7BBBB;
       background-color: #3c4042;
       font-weight: bold;
-      font-size: 14px;
-      padding: 10px;
+      font-size: 13px;
+      padding: 10px 15px;
+      border-top: 3px solid transparent;
       border-right: 2px solid black;
       margin-right: -5px;
       text-decoration: none; }
       header ul.main-menu li a:hover {
-        border-top: 3px solid orange;
+        border-top-width: 3px;
+        border-top-style: solid;
+        border-top-color: orange;
         background-color: #35393b; }
     header ul.main-menu li:first-child a {
+      padding-left: 25px;
       border-radius: 5px 0 0 0; }
     header ul.main-menu li:last-child a {
+      padding-right: 25px;
       border-right: none;
       border-radius: 0 5px 0 0; }
     header ul.main-menu li.active {
       border-bottom: 3px solid #acd373; }
   header ul.lang {
-    width: 15%;
-    text-align: right; }
+    width: 14%;
+    text-align: right;
+    position: relative;
+    left: 0;
+    top: 2px; }
     header ul.lang img {
       height: 10px;
       width: 15px; }
@@ -63,7 +74,7 @@ header {
 section {
   padding: 0 15%; }
   section h1 {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: -5px;
     font-weight: bold;
     font-size: 26px; }
@@ -85,13 +96,16 @@ section {
           width: 20px;
           position: relative;
           left: 0;
-          top: 2px; }
+          top: 2px;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
         section .main-block ul li p {
           display: inline;
           margin-left: 5px;
           color: #8797b0;
           text-decoration: underline;
-          cursor: pointer; }
+          cursor: pointer;
+          font-size: 16px; }
       section .main-block ul li.active {
         background-color: #f5f5f5;
         box-shadow: 1px 0px rgba(0, 0, 0, 0.12), -1px 0px rgba(0, 0, 0, 0.12);
@@ -105,6 +119,9 @@ section {
         font-weight: bold;
         text-decoration: none;
         color: black; }
+      section .main-block ul li.active img {
+        -webkit-filter: none;
+        filter: none; }
     section .main-block ol {
       background-color: #f5f5f5;
       padding: 10px 30px;
@@ -158,5 +175,9 @@ div.line {
 footer {
   padding: 10px 15%;
   font-size: 14px; }
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 /*# sourceMappingURL=main2.css.map */
